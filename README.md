@@ -17,21 +17,6 @@ You can modify the simulation environment to include the Post Office and the mul
 PX4-Autopilot/Tools/simulation/gz/worlds/baylands.sdf
 ```
 
-### Purpose:
-This file defines the simulation environment, including:
-- Terrain and layout
-- Models (e.g., post office, balls, obstacles)
-- Lighting and physics settings
-- Drone spawn positions
-
-### Example: Adding a model
-```xml
-<include>
-  <uri>model://tree</uri>
-  <pose>5 2 0 0 0 0</pose>
-</include>
-```
-
 ---
 
 ## 3. Running the Simulation
