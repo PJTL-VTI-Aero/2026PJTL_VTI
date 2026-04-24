@@ -1,0 +1,131 @@
+<sdf version='1.9'>
+  <world name='baylands'>
+    <physics type="ode">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.8 0.5 1</ambient>
+      <grid>false</grid>
+      <sky>
+        <clouds>true</clouds>
+      </sky>
+      <shadows>1</shadows>
+    </scene>
+    <light name='sunUTC' type='directional'>
+      <pose>0 0 500 0 -0 0</pose>
+      <cast_shadows>false</cast_shadows>
+      <intensity>1</intensity>
+      <direction>0.001 0.625 -0.78</direction>
+      <diffuse>0.904 0.904 0.904 1</diffuse>
+      <specular>0.271 0.271 0.271 1</specular>
+      <attenuation>
+        <range>2000</range>
+        <linear>0</linear>
+        <constant>1</constant>
+        <quadratic>0</quadratic>
+      </attenuation>
+    </light>
+    <include>
+      <uri>
+        https://fuel.gazebosim.org/1.0/OpenRobotics/models/baylands
+      </uri>
+      <name>park</name>
+      <pose>205 155 -1 0 0 0</pose>
+    </include>
+    <include>
+      <uri>
+        https://fuel.gazebosim.org/1.0/OpenRobotics/models/Coast Water
+      </uri>
+      <pose>0 0 -2 0 0 0
+        <relative_to>park</relative_to>
+      </pose>
+    </include>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>37.412173071650805</latitude_deg>
+      <longitude_deg>-121.998878727967</longitude_deg>
+      <elevation>38</elevation>
+    </spherical_coordinates>
+
+
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Post Office</uri>
+      <name> Post Office </name>
+      <pose> -20.72 -36.70 0.06 0 0 0.44
+        <relative_to>park</relative_to>
+      </pose>
+    </include>   
+    <model name="red_ball">
+      <static>true</static>  
+      <pose> -15.91 -28.26 0.44 0 0 0
+        <relative_to>park</relative_to>
+      </pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius> 0.5 </radius> 
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>  
+            <diffuse>1 0 0 1 </diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+
+    <model name="green_ball">
+      <static>true</static>  
+      <pose> -29.59 -29.67 0.44 0 0 0
+        <relative_to>park</relative_to>
+      </pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius> 0.5 </radius> 
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0 1 0 1</ambient>  
+            <diffuse>0 1 0 1 </diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+
+    <model name="blue_ball">
+      <static>true</static>  
+      <pose> -30.27 -39.67 0.44 0 0 0
+        <relative_to>park</relative_to>
+      </pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius> 0.5 </radius> 
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>  
+            <diffuse>0 0 1 1 </diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
+
+
+
+
