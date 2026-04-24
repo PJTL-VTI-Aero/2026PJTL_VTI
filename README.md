@@ -10,7 +10,7 @@ git clone https://github.com/PX4/PX4-Autopilot.git
 ---
 
 ## 2. Modifying the Baylands World (baylands.sdf)
-You can modify the simulation environment to include the Post Office and the multicolored balls by editing the `baylands.sdf` world file.
+You can modify the simulation environment to include the Post Office and the multicolored balls by editing the `baylands.sdf` in the PX4 repo with the `baylands.sdf` file found here.
 
 ### File location:
 ```bash
