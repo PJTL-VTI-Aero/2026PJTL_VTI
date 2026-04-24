@@ -1,0 +1,6 @@
+venv/
+PX4-Autopilot/
+*.AppImage
+*.png
+*.wav
+__pycache__/
