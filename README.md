@@ -68,3 +68,10 @@ await drone.connect(system_address="udpin://0.0.0.0:14540")
 
 ### Real Drone (Freefly Alta X)
 When connecting to a real vehicle, update the `system_address` to match the telemetry connection instead of the SITL UDP endpoint.
+
+#### Interfacing with the ZedX One Camera
+On the Jetson, run ```cv2streamer.py```. Be sure to change the host in the gst_output. 
+
+On the receiving device run this:
+```gst-launch-1.0 udpsrc port=5000 caps="application/x-rtp, media=video, clock-rate=90000, encoding-name=H264, payload=96" ! rtph264depay ! avdec_h264 ! autovideosink```
+
