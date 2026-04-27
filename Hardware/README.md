@@ -59,7 +59,7 @@ The structure is 3D-printed from PETG to ensure robustness under heat loads (fro
 ## Interfaces
 ### Electrical (wiring)
 
-![Image not found](wiring.png)
+![Image not found](wiring.jpg)
 
 The OBC need to be connected to antenna:
 - Ethernet cable between the OBC and the antenna
